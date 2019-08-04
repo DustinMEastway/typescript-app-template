@@ -1,4 +1,5 @@
 import * as express from 'express';
+import * as path from 'path';
 import * as webpack from 'webpack';
 import * as webpackDevMiddleware from 'webpack-dev-middleware';
 import * as config from '../webpack.config.js';
@@ -12,7 +13,8 @@ server.use(webpackDevMiddleware(webpack(config), {
 }));
 
 // add a public directory for static files
-server.use(express.static(`${__dirname}\\assets`));
+const assetsPath = path.resolve(__dirname, 'assets');
+server.use(express.static(assetsPath));
 
 // listen for users connecting
 server.listen(port, () => {
