@@ -1,6 +1,7 @@
 import './style.scss';
+import { app } from './app/app';
 
-document.body.innerHTML = '<p>Hello World!</p>';
+app();
 
 // client side of live reloading when changes are made
 const url = (location.host || 'localhost').split(':')[0];

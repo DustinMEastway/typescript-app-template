@@ -13,7 +13,7 @@ server.use(webpackDevMiddleware(webpack(config), {
 }));
 
 // add a public directory for static files
-const assetsPath = path.resolve(__dirname, 'assets');
+const assetsPath = path.resolve(__dirname, '..', 'public');
 server.use(express.static(assetsPath));
 
 // listen for users connecting
