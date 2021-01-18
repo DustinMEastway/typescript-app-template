@@ -30,20 +30,20 @@ module.exports = [{
 		rules: [
 			// typescript
 			{
-				test: /\.tsx?$/,
+				test: /\.tsx?$/i,
 				use: 'ts-loader',
 				exclude: /node_modules/
 			},
 			// images
 			{
-				test: /\.(png|svg|jpg|gif)$/,
+				test: /\.(png|svg|jpg|gif)$/i,
 				use: [
 					'file-loader'
 				]
 			},
 			// styles
 			{
-				test: /\.s?css$/,
+				test: /\.s?css$/i,
 				use: [
 					// creates `style` nodes from JS strings
 					'style-loader',

@@ -1,7 +1,7 @@
+import { app } from 'app/app';
 import './style.scss';
-import { app } from './app/app';
 
-app();
+document.body.appendChild(app());
 
 // client side of live reloading when changes are made
 const url = (location.host || 'localhost').split(':')[0];

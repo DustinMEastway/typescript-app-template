@@ -1,3 +1,6 @@
 export function app() {
-	document.write(`<p>Hello World!</p>`);
+	const element = document.createElement(`div`);
+	element.innerHTML = 'Hello World!';
+
+	return element;
 }
