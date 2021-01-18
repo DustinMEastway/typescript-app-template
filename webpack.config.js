@@ -19,11 +19,11 @@ module.exports = [{
 		publicPath: '/'
 	},
 	plugins: [
-		// clearn out the dist directory
+		// clean out the dist directory
 		new CleanWebpackPlugin(),
 		// create the index.html file with bundles automatically imported
 		new HtmlWebpackPlugin({
-			title: ''
+			template: path.resolve(__dirname, 'src', 'index.html')
 		})
 	],
 	module: {
@@ -45,8 +45,11 @@ module.exports = [{
 			{
 				test: /\.s?css$/,
 				use: [
+					// creates `style` nodes from JS strings
 					'style-loader',
+					// translates CSS into CommonJS
 					'css-loader',
+					// compiles Sass to CSS
 					'sass-loader'
 				]
 			}
